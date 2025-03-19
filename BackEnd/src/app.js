@@ -4,6 +4,12 @@ const cors = require('cors')
 
 const app = express()
 
+app.use(cors({
+    origin: "https://code-reviewer-frontend-kqjn.onrender.com", // Allow frontend URL
+    methods: "GET,POST",
+    allowedHeaders: "Content-Type"
+  }));
+
 app.use(cors())
 
 
